@@ -23,8 +23,6 @@ build/Release
 # Commenting this out is preferred by some people, see
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules
-src/emax-util/csvs
-src/emax-util/csvs2
 
 # Users Environment Variables
 .lock-wscript
@@ -112,4 +110,3 @@ $RECYCLE.BIN/
 # Others
 lib/
 data/
-mongodb-data/

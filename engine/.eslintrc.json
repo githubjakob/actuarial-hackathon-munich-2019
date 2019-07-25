@@ -1,0 +1,29 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "ecmaFeatures": { "experimentalObjectRestSpread": true }
+  },
+  "extends": ["airbnb", "prettier", "plugin:compat/recommended"],
+  "rules": {
+    "no-console": 0,
+    "indent": [
+      "error",
+      2
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "space-before-function-paren": ["error", "always"]
+
+  }
+}
