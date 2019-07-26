@@ -51,7 +51,9 @@ app.use(express.errorHandler({ logger }))
 app.hooks(appHooks)
 
 setTimeout(async () => {
-  await app.service('data').create({ text: 'some text' })
-}, 3000)
+  await app
+    .service('math-server')
+    .find({ query: { fromEngine: 'Hi from engine' } })
+}, 1000)
 
 module.exports = app
