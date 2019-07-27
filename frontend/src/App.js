@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import { Layout, Form, Select } from "antd";
+import { Layout, Form, Select, InputNumber } from "antd";
 import {
   locations as locationsData,
   genders as gendersData,
@@ -11,9 +11,10 @@ import {
 const { Option } = Select;
 const { Header, Content, Footer } = Layout;
 
-const MultiSelect = ({ options = [], state, setState }) => {
+const MultiSelect = ({ options = [], state, setState, placeholder }) => {
   return (
     <Select
+      placeholder={placeholder}
       mode="multiple"
       style={{ minWidth: 150 }}
       defaultValue={[]}
@@ -34,6 +35,7 @@ const App = () => {
   const [locations, setLocations] = useState([]);
   const [gender, setGender] = useState("");
   const [plans, setPlans] = useState([]);
+  const [age, setAge] = useState({});
 
   console.log({ location: locations, gender, plan: plans });
 
@@ -47,12 +49,23 @@ const App = () => {
           <Form layout="inline">
             <Form.Item label="Standort">
               <MultiSelect
+                placeholder="Standort auswählen"
                 options={locationsData}
                 state={locations}
                 setState={setLocations}
               />
             </Form.Item>
-            <Form.Item label="Alter"> </Form.Item>
+            <Form.Item label="Alter">
+              <InputNumber
+                placeholder="Von"
+                onChange={value => setAge({ ...age, from: value })}
+              />
+              {" - "}
+              <InputNumber
+                placeholder="Bis"
+                onChange={value => setAge({ ...age, to: value })}
+              />
+            </Form.Item>
             <Form.Item label="Geschlecht">
               <Select
                 style={{ minWidth: 150 }}
@@ -72,15 +85,13 @@ const App = () => {
             </Form.Item>
             <Form.Item label="Zusage / Plan">
               <MultiSelect
+                placeholder="Plan auswählen"
                 options={plansData}
                 state={plans}
                 setState={setPlans}
               />
             </Form.Item>
           </Form>
-          {/* <div style={{ background: "#fff", padding: 24, minHeight: 380 }}>
-            Content
-          </div> */}
         </Content>
         <Footer style={{ textAlign: "center" }}>
           Created by team h4ckerm3n
