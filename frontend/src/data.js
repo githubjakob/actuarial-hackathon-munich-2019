@@ -1,0 +1,81 @@
+import _ from "lodash";
+
+const locations = _.uniq([
+  "Saarbrücken",
+  "Aalen",
+  "Berlin",
+  "Lübeck",
+  "Aschaffenburg",
+  "Wilhelmshaven",
+  "Jülich",
+  "Karlsruhe",
+  "Gießen",
+  "Jena",
+  "Berlin",
+  "Paderborn",
+  "Gießen",
+  "Solingen",
+  "Düsseldorf",
+  "Pforzheim",
+  "Cuxhaven",
+  "Quakenbrück",
+  "Quedlinburg",
+  "Cuxhaven",
+  "Dortmund",
+  "Quickborn",
+  "Münster",
+  "Kassel",
+  "Karlsruhe",
+  "Erlangen",
+  "Wilhelmshaven",
+  "Hannover",
+  "Gronau",
+  "Aalen",
+  "Augsburg",
+  "Neuss",
+  "Tuttlingen",
+  "Hamburg",
+  "Tübingen",
+  "Stuttgart",
+  "Tübingen",
+  "Cuxhaven",
+  "Münster",
+  "Essen",
+  "Recklinghausen",
+  "München",
+  "Wuppertal",
+  "Unna",
+  "Zweibrücken",
+  "Jever",
+  "Bochum",
+  "Trier",
+  "Celle",
+  "Gießen",
+  "Schwäbisch",
+  "Wilhelmshaven",
+  "Bonn"
+]);
+
+const genders = {
+  1: "Mann",
+  2: "Frau"
+};
+
+const plans = [
+  "PR",
+  "PR_Sonder1",
+  "PR_Sonder2",
+  "UK",
+  "DC_neu",
+  "DC_alt",
+  "DC_Exec",
+  "DC_Sonder1",
+  "DC_Sonder2",
+  "DC_Sonder3",
+  "DC_Sonder4",
+  "DC_Sonder5",
+  "DC_Sonder6",
+  "DC_Sonder7"
+];
+
+export { locations, genders, plans };

@@ -26,7 +26,7 @@ export default function ExampleFeathersGetData() {
       .service("data")
       .find({ query: { __options: { csv: true } } })
       .then(res => {
-        console.log("res: ", res.data);
+        console.log("res: ", res);
         // startCsvDownload(res.data);
       });
   }
