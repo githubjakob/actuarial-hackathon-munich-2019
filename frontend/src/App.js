@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import "./App.css";
 
 import { Layout, Form, Select } from "antd";
-import { locations, genders, plans } from "./data";
+import {
+  locations as locationsData,
+  genders as gendersData,
+  plans as plansData
+} from "./data";
 
 const { Option } = Select;
 const { Header, Content, Footer } = Layout;
@@ -27,10 +31,11 @@ const MultiSelect = ({ options = [], state, setState }) => {
 };
 
 const App = () => {
-  const [location, setLocation] = useState([]);
+  const [locations, setLocations] = useState([]);
   const [gender, setGender] = useState("");
+  const [plans, setPlans] = useState([]);
 
-  console.log({ location, gender });
+  console.log({ location: locations, gender, plan: plans });
 
   return (
     <div className="App">
@@ -42,9 +47,9 @@ const App = () => {
           <Form layout="inline">
             <Form.Item label="Standort">
               <MultiSelect
-                options={locations}
-                state={location}
-                setState={setLocation}
+                options={locationsData}
+                state={locations}
+                setState={setLocations}
               />
             </Form.Item>
             <Form.Item label="Alter"> </Form.Item>
@@ -58,14 +63,20 @@ const App = () => {
                 <Option key="-" value="">
                   Alle
                 </Option>
-                {Object.entries(genders).map(([value, text]) => (
+                {Object.entries(gendersData).map(([value, text]) => (
                   <Option key={value} value={value}>
                     {text}
                   </Option>
                 ))}
               </Select>
             </Form.Item>
-            <Form.Item label="Zusage / Plan"> </Form.Item>
+            <Form.Item label="Zusage / Plan">
+              <MultiSelect
+                options={plansData}
+                state={plans}
+                setState={setPlans}
+              />
+            </Form.Item>
           </Form>
           {/* <div style={{ background: "#fff", padding: 24, minHeight: 380 }}>
             Content
