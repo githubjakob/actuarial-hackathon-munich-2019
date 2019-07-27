@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 import app from "../feathers.js";
 
 const DataTable = ({ data, loading }) => {
-  console.log("data: ", data);
   if (!data) return <span />;
   const tableData = [
     {
@@ -74,23 +73,23 @@ const DataTable = ({ data, loading }) => {
     Remeasurements: "remeasurements",
     "DBO, EOY": "dbo_eoy"
   };
-  console.log("dataFromServer: ", data);
   const years = data.map(d => d.year);
-  console.log("years: ", years);
 
   // const keys = ["descriptions", ...years];
 
   // console.log("keys: ", keys);
 
+  const formatter = new Intl.NumberFormat("de-DE", {
+    style: "currency",
+    currency: "EUR",
+    minimumFractionDigits: 2
+  });
   years.forEach((year, i) => {
     tableData.forEach(row => {
       const resKey = keyMap[row.description];
-      console.log("resKey: ", resKey);
-      row[year] = Math.floor(data[i].data[resKey]);
+      row[year] = formatter.format(data[i].data[resKey]);
     });
   });
-
-  console.log("data: ", tableData);
 
   tableData.forEach(doc => {
     return {};
@@ -102,7 +101,12 @@ const DataTable = ({ data, loading }) => {
       dataIndex: "description",
       key: "description"
     },
-    ...years.map(year => ({ title: year, dataIndex: year, key: year }))
+    ...years.map(year => ({
+      title: year,
+      dataIndex: year,
+      key: year,
+      align: "right"
+    }))
   ];
 
   return (

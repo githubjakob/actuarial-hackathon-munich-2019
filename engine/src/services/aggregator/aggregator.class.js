@@ -13,6 +13,9 @@ class Service {
   async find(params) {
     const { query } = params
     console.log('query: ', query)
+    if (query.Geschlecht) {
+      query.Geschlecht = +query.Geschlecht
+    }
 
     const dataModel = this.app.service('data').Model
 
