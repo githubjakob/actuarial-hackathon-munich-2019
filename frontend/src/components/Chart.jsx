@@ -7,9 +7,6 @@ const defaultConfig = {
   tooltip: {
     trigger: "axis"
   },
-  dataZoom: {
-    type: "inside"
-  },
   yAxis: {
     type: "value"
   },
@@ -104,7 +101,7 @@ const getChartOptions = data => {
 const Chart = props => {
   const { data = [], loading = false } = props;
 
-  if (!data.length)
+  if (!data.length || loading)
     return (
       <Spin tip="Loading..." spinning={loading} delay={300}>
         <Empty />
