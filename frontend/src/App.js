@@ -1,8 +1,9 @@
+import _ from "lodash";
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Chart from "./components/Chart";
 
-import { Layout, Form, Select, InputNumber, Divider } from "antd";
+import { Layout, Form, Select, InputNumber, Divider, Input } from "antd";
 import {
   locations as locationsData,
   genders as gendersData,
@@ -38,6 +39,15 @@ const App = () => {
   const [gender, setGender] = useState("");
   const [plans, setPlans] = useState([]);
   const [age, setAge] = useState({});
+
+  const [jahrZins, setJahrZins] = useState({
+    "2019": undefined,
+    "2020": undefined,
+    "2021": undefined,
+    "2022": undefined,
+    "2023": undefined
+  });
+
   const [data, setData] = useState();
   const [loading, setLoading] = useState(false);
 
@@ -47,7 +57,7 @@ const App = () => {
         Geschlecht: gender || undefined,
         Standort: locations.length ? { $in: locations } : undefined,
         Alter: age.from && age.to ? { $gt: age.from, $lte: age.to } : undefined,
-        JahrZins: [{ jahr: "2019", zins: 0.013 }]
+        JahrZins: Object.values(jahrZins).filter(x => !!x)
       };
       try {
         setLoading(true);
@@ -58,7 +68,9 @@ const App = () => {
         console.log("err.message: ", err.message);
       }
     })();
-  }, [locations, gender, age]);
+  }, [locations, gender, age, jahrZins]);
+
+  console.log({ jahrZins });
 
   return (
     <div className="App">
@@ -112,6 +124,22 @@ const App = () => {
                 setState={setPlans}
               />
             </Form.Item>
+            <div style={{ marginTop: 10 }}>
+              <Form.Item label="Zinsprognosen" />
+              {Object.keys(jahrZins).map(jahr => {
+                return (
+                  <Form.Item>
+                    <Input
+                      style={{ width: 150 }}
+                      addonBefore={jahr}
+                      onChange={zins => {
+                        setJahrZins({ ...jahrZins, [jahr]: zins.target.value });
+                      }}
+                    />
+                  </Form.Item>
+                );
+              })}
+            </div>
           </Form>
           <Divider />
           <Chart loading={loading} />
