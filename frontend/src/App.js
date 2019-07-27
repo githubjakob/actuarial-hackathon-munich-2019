@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import { Layout, Form, Select, InputNumber } from "antd";
+import { Layout, Form, Select, InputNumber, Divider } from "antd";
 import {
   locations as locationsData,
   genders as gendersData,
@@ -92,6 +92,8 @@ const App = () => {
               />
             </Form.Item>
           </Form>
+          <Divider />
+          <Chart />
         </Content>
         <Footer style={{ textAlign: "center" }}>
           Created by team h4ckerm3n
