@@ -57,12 +57,12 @@ app.hooks(appHooks)
 // }, 1000)
 
 setTimeout(async () => {
-  // const csvFilePath=''
-  // const csv=require('csvtojson')
+  // const csvFilePath = 'daten.csv'
+  // const csv = require('csvtojson')
   // csv()
   //   .fromFile(csvFilePath)
-  //   .then((jsonObj)=>{
-  //         console.log(jsonObj);
+  //   .then(jsonObj => {
+  //     console.log(jsonObj)
   //   })
 }, 1000)
 
