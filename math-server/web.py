@@ -29,8 +29,12 @@ def calc_i_cost(i_past, dbo, bp):
 
 def irfs_yearly(prev_service_cost, dbo, bp, interests):
     i_past, i_present = interests
+    print('i_past:', i_past)
 
-    mid_dbo = dbo * ((1 + i_past) / (1 + i_present)) ** (calc_d(i_present - i_past))
+
+    d = calc_d(i_present - i_past)
+    print('d:', d)
+    mid_dbo = dbo * ((1 + i_past) / (1 + i_present)) ** d
     rms = mid_dbo - dbo
 
     cur_interest_cost = calc_i_cost(i_past, dbo, bp)
@@ -48,6 +52,7 @@ def irfs_yearly(prev_service_cost, dbo, bp, interests):
 
 @app.route('/basic-table')
 def basic_tabelle():
+    global calc_d
     req_get = lambda val: request.args.get(val)
     get_bp = lambda year: float(req_get('PR - Zahlung {}'.format(year)))
     yearly_interest = list(map(json.loads, request.args.getlist('JahrZins[]')))
@@ -58,12 +63,26 @@ def basic_tabelle():
     bp = get_bp(cur_year)
     neg_zinz = float(req_get('PR - DBO Zins-'))
     pos_zinz = float(req_get('PR - DBO Zins+'))
+    print('neg_zinz:', neg_zinz)
+    print('pos_zinz:', pos_zinz)
+    print('dbo:', dbo)
 
-    # def calc_d_start(dbo, r0, d_dbo, dr):
-    #     return 
+    def calc_d_start(dbo_0, r0, d_dbo, dr):
+        return log(d_dbo/dbo_0, 10) / log((1 + r0) / (1 + r0 + dr), 10)
 
-    m = (pos_zinz - neg_zinz) / 0.005
-    t = pos_zinz 
+    neg_d = calc_d_start(dbo, 0.02, neg_zinz, -0.0025)
+    pos_d = calc_d_start(dbo, 0.02, pos_zinz, 0.0025)
+    print('neg_d:', neg_d)
+    print('pos_d:', pos_d)
+
+    m = (pos_d - neg_d) / (0.0025 - (- 0.0025))
+    print('m:', m)
+    t = pos_d - (m * 0.0025)
+    print('t:', t)
+
+    calc_d = lambda dr: ([m * dr + t, print('dr:', dr)])[0]
+    print('D({}) ='.format(0.0025), calc_d(0.0025))
+    print('D({}) ='.format(-0.0025), calc_d(-0.0025))
 
     i_past, i_present = 0.02, float(yearly_interest[0]['zins'])
     res_start = irfs_yearly(0, dbo, -bp, (i_past, i_present))
