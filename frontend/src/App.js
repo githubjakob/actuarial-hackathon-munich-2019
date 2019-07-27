@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Chart from "./components/Chart";
 
@@ -8,6 +8,7 @@ import {
   genders as gendersData,
   plans as plansData
 } from "./data";
+import app from "./feathers";
 
 const { Option } = Select;
 const { Header, Content, Footer } = Layout;
@@ -37,8 +38,27 @@ const App = () => {
   const [gender, setGender] = useState("");
   const [plans, setPlans] = useState([]);
   const [age, setAge] = useState({});
+  const [data, setData] = useState();
+  const [loading, setLoading] = useState(false);
 
-  console.log({ location: locations, gender, plan: plans });
+  useEffect(() => {
+    (async () => {
+      const query = {
+        Geschlecht: gender || undefined,
+        Standort: locations.length ? { $in: locations } : undefined,
+        Alter: age.from && age.to ? { $gt: age.from, $lte: age.to } : undefined,
+        JahrZins: [{ jahr: "2019", zins: 0.013 }]
+      };
+      try {
+        setLoading(true);
+        const res = await app.service("aggregator").find({ query });
+        setLoading(false);
+        setData(res);
+      } catch (err) {
+        console.log("err.message: ", err.message);
+      }
+    })();
+  }, [locations, gender, age]);
 
   return (
     <div className="App">
@@ -94,7 +114,7 @@ const App = () => {
             </Form.Item>
           </Form>
           <Divider />
-          <Chart />
+          <Chart loading={loading} />
         </Content>
         <Footer style={{ textAlign: "center" }}>
           Created by team h4ckerm3n
