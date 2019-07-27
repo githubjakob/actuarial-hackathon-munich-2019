@@ -37,13 +37,52 @@ const getChartOptions = data => {
       boundaryGap: false,
       data: data.map(x => x.year)
     },
-    // legend: {
-    //   data: data.year
-    // },
+    legend: {
+      data: data.year
+    },
     series: [
       {
         name: "DBO EOY",
+        lineStyle: {
+          width: 5
+        },
         data: data.map(x => Math.floor(x.data.dbo_eoy)),
+        type: "line",
+        smooth: true
+      },
+      {
+        name: "Service Cost",
+        data: data.map(x => Math.floor(x.data.service_cost)),
+        type: "line",
+        smooth: true
+      },
+      {
+        name: "Interest Cost",
+        data: data.map(x => Math.floor(x.data.interest_cost)),
+        type: "line",
+        smooth: true
+      },
+      {
+        name: "Contributions",
+        data: data.map(x => Math.floor(x.data.contributions)),
+        type: "line",
+        smooth: true
+      },
+      {
+        name: "Benefits Paid",
+        data: data.map(x => Math.floor(x.data.benefits_paid)),
+        type: "line",
+        smooth: true
+      },
+      {
+        name: "Remeasurements",
+        data: data.map(x => Math.floor(x.data.remeasurements)),
+        type: "line",
+        smooth: true
+      },
+      {
+        name: "DBO BOY",
+        data: data.map(x => Math.floor(x.data.dbo_boy)),
         type: "line",
         smooth: true
       }

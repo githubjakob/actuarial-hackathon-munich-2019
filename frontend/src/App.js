@@ -60,7 +60,7 @@ const App = () => {
         Alter: age.from && age.to ? { $gt: age.from, $lte: age.to } : undefined,
         JahrZins: Object.entries(jahrZins)
           .filter(([_jahr, zins]) => !!zins)
-          .map(([jahr, zins]) => ({ jahr, zins }))
+          .map(([jahr, zins]) => ({ jahr, zins: +zins }))
       };
       try {
         setLoading(true);
@@ -120,14 +120,14 @@ const App = () => {
                 ))}
               </Select>
             </Form.Item>
-            <Form.Item label="Zusage / Plan">
+            {/* <Form.Item label="Zusage / Plan">
               <MultiSelect
                 placeholder="Plan auswählen"
                 options={plansData}
                 state={plans}
                 setState={setPlans}
               />
-            </Form.Item>
+            </Form.Item> */}
             <div style={{ marginTop: 10 }}>
               <Form.Item label="Zinsprognosen" />
               {Object.keys(jahrZins).map(jahr => {
@@ -136,6 +136,7 @@ const App = () => {
                     <Input
                       style={{ width: 150 }}
                       addonBefore={jahr}
+                      defaultValue={jahrZins[jahr]}
                       onChange={zins => {
                         setJahrZins({ ...jahrZins, [jahr]: zins.target.value });
                       }}
