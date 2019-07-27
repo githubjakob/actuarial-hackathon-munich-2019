@@ -21,8 +21,7 @@ class Service {
       params: query
     }
     const res = await axios(reqBody)
-    console.log('res from math: ', res)
-    return res.data
+    return res.data.data
   }
 
   async get(id, params) {

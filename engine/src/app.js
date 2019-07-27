@@ -61,7 +61,6 @@ app.hooks(appHooks)
 
 setTimeout(async () => {
   try {
-
     const res = await app.service('aggregator').find({
       query: {
         // Geschlecht: 2,
@@ -76,7 +75,7 @@ setTimeout(async () => {
         ]
       }
     })
-    console.log('res: ', JSON.stringify(res, null, 2))
+    console.log('res: ', res)
   } catch (err) {
     console.log('err.message: ', err.message)
   }
@@ -120,32 +119,5 @@ setTimeout(async () => {
     console.log('\n\n\n\n\n\n')
   }
 }, 1000)
-
-const testMathRes = [
-  {
-    year: 2019,
-    data: {
-      dbo_boy: 8,
-      service_cost: 1,
-      interest_cost: 9,
-      contributions: 0,
-      benefits_paid: 8,
-      remeasurements: 8,
-      dbo_eoy: 32
-    }
-  },
-  {
-    year: 2020,
-    data: {
-      dbo_boy: 8,
-      service_cost: 1,
-      interest_cost: 9,
-      contributions: 0,
-      benefits_paid: 8,
-      remeasurements: 8,
-      dbo_eoy: 32
-    }
-  }
-]
 
 module.exports = app

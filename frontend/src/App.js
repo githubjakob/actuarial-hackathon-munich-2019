@@ -2,6 +2,7 @@ import _ from "lodash";
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Chart from "./components/Chart";
+import DataTable from "./components/DataTable";
 
 import { Layout, Form, Select, InputNumber, Divider, Input } from "antd";
 import {
@@ -41,11 +42,11 @@ const App = () => {
   const [age, setAge] = useState({});
 
   const [jahrZins, setJahrZins] = useState({
-    "2019": undefined,
-    "2020": undefined,
-    "2021": undefined,
-    "2022": undefined,
-    "2023": undefined
+    "2019": 0.013,
+    "2020": 0.012,
+    "2021": 0.011,
+    "2022": 0.01,
+    "2023": 0.01
   });
 
   const [data, setData] = useState();
@@ -63,35 +64,9 @@ const App = () => {
       };
       try {
         setLoading(true);
-        // const res = await app.service("aggregator").find({ query });
-        // TODO: Remove mock data
-        const res = [
-          {
-            year: 2019,
-            data: {
-              dbo_boy: 8,
-              service_cost: 1,
-              interest_cost: 9,
-              contributions: 0,
-              benefits_paid: 8,
-              remeasurements: 8,
-              dbo_eoy: 32
-            }
-          },
-          {
-            year: 2020,
-            data: {
-              dbo_boy: 8,
-              service_cost: 1,
-              interest_cost: 9,
-              contributions: 0,
-              benefits_paid: 8,
-              remeasurements: 8,
-              dbo_eoy: 50
-            }
-          }
-        ];
+        const res = await app.service("aggregator").find({ query });
         setLoading(false);
+        console.log("res: ", res);
         setData(res);
       } catch (err) {
         console.log("err.message: ", err.message);
@@ -172,6 +147,7 @@ const App = () => {
           </Form>
           <Divider />
           <Chart data={data} loading={loading} />
+          <DataTable data={data} loading={loading} />
         </Content>
         <Footer style={{ textAlign: "center" }}>
           Created by team häckermen
