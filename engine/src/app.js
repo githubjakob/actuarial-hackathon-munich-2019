@@ -50,10 +50,20 @@ app.use(express.errorHandler({ logger }))
 
 app.hooks(appHooks)
 
+// setTimeout(async () => {
+//   await app
+//     .service('math-server')
+//     .find({ query: { fromEngine: 'Hi from engine' } })
+// }, 1000)
+
 setTimeout(async () => {
-  await app
-    .service('math-server')
-    .find({ query: { fromEngine: 'Hi from engine' } })
+  // const csvFilePath=''
+  // const csv=require('csvtojson')
+  // csv()
+  //   .fromFile(csvFilePath)
+  //   .then((jsonObj)=>{
+  //         console.log(jsonObj);
+  //   })
 }, 1000)
 
 module.exports = app

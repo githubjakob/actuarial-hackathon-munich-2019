@@ -1,0 +1,584 @@
+Personalnummer
+Name
+Geburtstag
+Bestandsart
+Geschlecht
+Standort
+Eintritt/Rentenbeginn
+Beginn vers.f. Dienstzeit
+Zusagedatum
+Endalter
+PR - DBO
+PR - Current Service Cost
+PR - DBO Zins+
+PR - DBO Zins-
+PR - Zahlung 2019
+PR - Zahlung 2020
+PR - Zahlung 2021
+PR - Zahlung 2022
+PR - Zahlung 2023
+PR_Sonder1 - DBO
+PR_Sonder1 - Current Service Cost
+PR_Sonder1 - DBO Zins+
+PR_Sonder1 - DBO Zins-
+PR_Sonder1 - Zahlung 2019
+PR_Sonder1 - Zahlung 2020
+PR_Sonder1 - Zahlung 2021
+PR_Sonder1 - Zahlung 2022
+PR_Sonder1 - Zahlung 2023
+PR_Sonder2 - DBO
+PR_Sonder2 - Current Service Cost
+PR_Sonder2 - DBO Zins+
+PR_Sonder2 - DBO Zins-
+PR_Sonder2 - Zahlung 2019
+PR_Sonder2 - Zahlung 2020
+PR_Sonder2 - Zahlung 2021
+PR_Sonder2 - Zahlung 2022
+PR_Sonder2 - Zahlung 2023
+UK - DBO
+UK - Current Service Cost
+UK - DBO Zins+
+UK - DBO Zins-
+UK - Zahlung 2019
+UK - Zahlung 2020
+UK - Zahlung 2021
+UK - Zahlung 2022
+UK - Zahlung 2023
+DC_neu - DBO
+DC_neu - Current Service Cost
+DC_neu - Umwandlung
+DC_neu - DBO Zins+
+DC_neu - DBO Zins-
+DC_neu - Zahlung 2019
+DC_neu - Zahlung 2020
+DC_neu - Zahlung 2021
+DC_neu - Zahlung 2022
+DC_neu - Zahlung 2023
+DC_alt - DBO
+DC_alt - Current Service Cost
+DC_alt - Umwandlung
+DC_alt - DBO Zins+
+DC_alt - DBO Zins-
+DC_alt - Zahlung 2019
+DC_alt - Zahlung 2020
+DC_alt - Zahlung 2021
+DC_alt - Zahlung 2022
+DC_alt - Zahlung 2023
+DC_Exec - DBO
+DC_Exec - Current Service Cost
+DC_Exec - Umwandlung
+DC_Exec - DBO Zins+
+DC_Exec - DBO Zins-
+DC_Exec - Zahlung 2019
+DC_Exec - Zahlung 2020
+DC_Exec - Zahlung 2021
+DC_Exec - Zahlung 2022
+DC_Exec - Zahlung 2023
+DC_Sonder1 - DBO
+DC_Sonder1 - Current Service Cost
+DC_Sonder1 - Umwandlung
+DC_Sonder1 - DBO Zins+
+DC_Sonder1 - DBO Zins-
+DC_Sonder1 - Zahlung 2019
+DC_Sonder1 - Zahlung 2020
+DC_Sonder1 - Zahlung 2021
+DC_Sonder1 - Zahlung 2022
+DC_Sonder1 - Zahlung 2023
+DC_Sonder2 - DBO
+DC_Sonder2 - Current Service Cost
+DC_Sonder2 - Umwandlung
+DC_Sonder2 - DBO Zins+
+DC_Sonder2 - DBO Zins-
+DC_Sonder2 - Zahlung 2019
+DC_Sonder2 - Zahlung 2020
+DC_Sonder2 - Zahlung 2021
+DC_Sonder2 - Zahlung 2022
+DC_Sonder2 - Zahlung 2023
+DC_Sonder3 - DBO
+DC_Sonder3 - Current Service Cost
+DC_Sonder3 - Umwandlung
+DC_Sonder3 - DBO Zins+
+DC_Sonder3 - DBO Zins-
+DC_Sonder3 - Zahlung 2019
+DC_Sonder3 - Zahlung 2020
+DC_Sonder3 - Zahlung 2021
+DC_Sonder3 - Zahlung 2022
+DC_Sonder3 - Zahlung 2023
+DC_Sonder4 - DBO
+DC_Sonder4 - Current Service Cost
+DC_Sonder4 - Umwandlung
+DC_Sonder4 - DBO Zins+
+DC_Sonder4 - DBO Zins-
+DC_Sonder4 - Zahlung 2019
+DC_Sonder4 - Zahlung 2020
+DC_Sonder4 - Zahlung 2021
+DC_Sonder4 - Zahlung 2022
+DC_Sonder4 - Zahlung 2023
+DC_Sonder5 - DBO
+DC_Sonder5 - Current Service Cost
+DC_Sonder5 - Umwandlung
+DC_Sonder5 - DBO Zins+
+DC_Sonder5 - DBO Zins-
+DC_Sonder5 - Zahlung 2019
+DC_Sonder5 - Zahlung 2020
+DC_Sonder5 - Zahlung 2021
+DC_Sonder5 - Zahlung 2022
+DC_Sonder5 - Zahlung 2023
+DC_Sonder6 - DBO
+DC_Sonder6 - Current Service Cost
+DC_Sonder6 - Umwandlung
+DC_Sonder6 - DBO Zins+
+DC_Sonder6 - DBO Zins-
+DC_Sonder6 - Zahlung 2019
+DC_Sonder6 - Zahlung 2020
+DC_Sonder6 - Zahlung 2021
+DC_Sonder6 - Zahlung 2022
+DC_Sonder6 - Zahlung 2023
+DC_Sonder7 - DBO
+DC_Sonder7 - Current Service Cost
+DC_Sonder7 - Umwandlung
+DC_Sonder7 - DBO Zins+
+DC_Sonder7 - DBO Zins-
+DC_Sonder7 - Zahlung 2019
+DC_Sonder7 - Zahlung 2020
+DC_Sonder7 - Zahlung 2021
+DC_Sonder7 - Zahlung 2022
+DC_Sonder7 - Zahlung 2023
+Personalnummer
+Name
+Geburtstag
+Bestandsart
+Geschlecht
+Standort
+Eintritt/Rentenbeginn
+Beginn vers.f. Dienstzeit
+Zusagedatum
+Endalter
+PR - DBO
+PR - Current Service Cost
+PR - DBO Zins+
+PR - DBO Zins-
+PR - Zahlung 2019
+PR - Zahlung 2020
+PR - Zahlung 2021
+PR - Zahlung 2022
+PR - Zahlung 2023
+PR_Sonder1 - DBO
+PR_Sonder1 - Current Service Cost
+PR_Sonder1 - DBO Zins+
+PR_Sonder1 - DBO Zins-
+PR_Sonder1 - Zahlung 2019
+PR_Sonder1 - Zahlung 2020
+PR_Sonder1 - Zahlung 2021
+PR_Sonder1 - Zahlung 2022
+PR_Sonder1 - Zahlung 2023
+PR_Sonder2 - DBO
+PR_Sonder2 - Current Service Cost
+PR_Sonder2 - DBO Zins+
+PR_Sonder2 - DBO Zins-
+PR_Sonder2 - Zahlung 2019
+PR_Sonder2 - Zahlung 2020
+PR_Sonder2 - Zahlung 2021
+PR_Sonder2 - Zahlung 2022
+PR_Sonder2 - Zahlung 2023
+UK - DBO
+UK - Current Service Cost
+UK - DBO Zins+
+UK - DBO Zins-
+UK - Zahlung 2019
+UK - Zahlung 2020
+UK - Zahlung 2021
+UK - Zahlung 2022
+UK - Zahlung 2023
+DC_neu - DBO
+DC_neu - Current Service Cost
+DC_neu - Umwandlung
+DC_neu - DBO Zins+
+DC_neu - DBO Zins-
+DC_neu - Zahlung 2019
+DC_neu - Zahlung 2020
+DC_neu - Zahlung 2021
+DC_neu - Zahlung 2022
+DC_neu - Zahlung 2023
+DC_alt - DBO
+DC_alt - Current Service Cost
+DC_alt - Umwandlung
+DC_alt - DBO Zins+
+DC_alt - DBO Zins-
+DC_alt - Zahlung 2019
+DC_alt - Zahlung 2020
+DC_alt - Zahlung 2021
+DC_alt - Zahlung 2022
+DC_alt - Zahlung 2023
+DC_Exec - DBO
+DC_Exec - Current Service Cost
+DC_Exec - Umwandlung
+DC_Exec - DBO Zins+
+DC_Exec - DBO Zins-
+DC_Exec - Zahlung 2019
+DC_Exec - Zahlung 2020
+DC_Exec - Zahlung 2021
+DC_Exec - Zahlung 2022
+DC_Exec - Zahlung 2023
+DC_Sonder1 - DBO
+DC_Sonder1 - Current Service Cost
+DC_Sonder1 - Umwandlung
+DC_Sonder1 - DBO Zins+
+DC_Sonder1 - DBO Zins-
+DC_Sonder1 - Zahlung 2019
+DC_Sonder1 - Zahlung 2020
+DC_Sonder1 - Zahlung 2021
+DC_Sonder1 - Zahlung 2022
+DC_Sonder1 - Zahlung 2023
+DC_Sonder2 - DBO
+DC_Sonder2 - Current Service Cost
+DC_Sonder2 - Umwandlung
+DC_Sonder2 - DBO Zins+
+DC_Sonder2 - DBO Zins-
+DC_Sonder2 - Zahlung 2019
+DC_Sonder2 - Zahlung 2020
+DC_Sonder2 - Zahlung 2021
+DC_Sonder2 - Zahlung 2022
+DC_Sonder2 - Zahlung 2023
+DC_Sonder3 - DBO
+DC_Sonder3 - Current Service Cost
+DC_Sonder3 - Umwandlung
+DC_Sonder3 - DBO Zins+
+DC_Sonder3 - DBO Zins-
+DC_Sonder3 - Zahlung 2019
+DC_Sonder3 - Zahlung 2020
+DC_Sonder3 - Zahlung 2021
+DC_Sonder3 - Zahlung 2022
+DC_Sonder3 - Zahlung 2023
+DC_Sonder4 - DBO
+DC_Sonder4 - Current Service Cost
+DC_Sonder4 - Umwandlung
+DC_Sonder4 - DBO Zins+
+DC_Sonder4 - DBO Zins-
+DC_Sonder4 - Zahlung 2019
+DC_Sonder4 - Zahlung 2020
+DC_Sonder4 - Zahlung 2021
+DC_Sonder4 - Zahlung 2022
+DC_Sonder4 - Zahlung 2023
+DC_Sonder5 - DBO
+DC_Sonder5 - Current Service Cost
+DC_Sonder5 - Umwandlung
+DC_Sonder5 - DBO Zins+
+DC_Sonder5 - DBO Zins-
+DC_Sonder5 - Zahlung 2019
+DC_Sonder5 - Zahlung 2020
+DC_Sonder5 - Zahlung 2021
+DC_Sonder5 - Zahlung 2022
+DC_Sonder5 - Zahlung 2023
+DC_Sonder6 - DBO
+DC_Sonder6 - Current Service Cost
+DC_Sonder6 - Umwandlung
+DC_Sonder6 - DBO Zins+
+DC_Sonder6 - DBO Zins-
+DC_Sonder6 - Zahlung 2019
+DC_Sonder6 - Zahlung 2020
+DC_Sonder6 - Zahlung 2021
+DC_Sonder6 - Zahlung 2022
+DC_Sonder6 - Zahlung 2023
+DC_Sonder7 - DBO
+DC_Sonder7 - Current Service Cost
+DC_Sonder7 - Umwandlung
+DC_Sonder7 - DBO Zins+
+DC_Sonder7 - DBO Zins-
+DC_Sonder7 - Zahlung 2019
+DC_Sonder7 - Zahlung 2020
+DC_Sonder7 - Zahlung 2021
+DC_Sonder7 - Zahlung 2022
+DC_Sonder7 - Zahlung 2023
+Personalnummer
+Name
+Geburtstag
+Bestandsart
+Geschlecht
+Standort
+Eintritt/Rentenbeginn
+Beginn vers.f. Dienstzeit
+Zusagedatum
+Endalter
+PR - DBO
+PR - Current Service Cost
+PR - DBO Zins+
+PR - DBO Zins-
+PR - Zahlung 2019
+PR - Zahlung 2020
+PR - Zahlung 2021
+PR - Zahlung 2022
+PR - Zahlung 2023
+PR_Sonder1 - DBO
+PR_Sonder1 - Current Service Cost
+PR_Sonder1 - DBO Zins+
+PR_Sonder1 - DBO Zins-
+PR_Sonder1 - Zahlung 2019
+PR_Sonder1 - Zahlung 2020
+PR_Sonder1 - Zahlung 2021
+PR_Sonder1 - Zahlung 2022
+PR_Sonder1 - Zahlung 2023
+PR_Sonder2 - DBO
+PR_Sonder2 - Current Service Cost
+PR_Sonder2 - DBO Zins+
+PR_Sonder2 - DBO Zins-
+PR_Sonder2 - Zahlung 2019
+PR_Sonder2 - Zahlung 2020
+PR_Sonder2 - Zahlung 2021
+PR_Sonder2 - Zahlung 2022
+PR_Sonder2 - Zahlung 2023
+UK - DBO
+UK - Current Service Cost
+UK - DBO Zins+
+UK - DBO Zins-
+UK - Zahlung 2019
+UK - Zahlung 2020
+UK - Zahlung 2021
+UK - Zahlung 2022
+UK - Zahlung 2023
+DC_neu - DBO
+DC_neu - Current Service Cost
+DC_neu - Umwandlung
+DC_neu - DBO Zins+
+DC_neu - DBO Zins-
+DC_neu - Zahlung 2019
+DC_neu - Zahlung 2020
+DC_neu - Zahlung 2021
+DC_neu - Zahlung 2022
+DC_neu - Zahlung 2023
+DC_alt - DBO
+DC_alt - Current Service Cost
+DC_alt - Umwandlung
+DC_alt - DBO Zins+
+DC_alt - DBO Zins-
+DC_alt - Zahlung 2019
+DC_alt - Zahlung 2020
+DC_alt - Zahlung 2021
+DC_alt - Zahlung 2022
+DC_alt - Zahlung 2023
+DC_Exec - DBO
+DC_Exec - Current Service Cost
+DC_Exec - Umwandlung
+DC_Exec - DBO Zins+
+DC_Exec - DBO Zins-
+DC_Exec - Zahlung 2019
+DC_Exec - Zahlung 2020
+DC_Exec - Zahlung 2021
+DC_Exec - Zahlung 2022
+DC_Exec - Zahlung 2023
+DC_Sonder1 - DBO
+DC_Sonder1 - Current Service Cost
+DC_Sonder1 - Umwandlung
+DC_Sonder1 - DBO Zins+
+DC_Sonder1 - DBO Zins-
+DC_Sonder1 - Zahlung 2019
+DC_Sonder1 - Zahlung 2020
+DC_Sonder1 - Zahlung 2021
+DC_Sonder1 - Zahlung 2022
+DC_Sonder1 - Zahlung 2023
+DC_Sonder2 - DBO
+DC_Sonder2 - Current Service Cost
+DC_Sonder2 - Umwandlung
+DC_Sonder2 - DBO Zins+
+DC_Sonder2 - DBO Zins-
+DC_Sonder2 - Zahlung 2019
+DC_Sonder2 - Zahlung 2020
+DC_Sonder2 - Zahlung 2021
+DC_Sonder2 - Zahlung 2022
+DC_Sonder2 - Zahlung 2023
+DC_Sonder3 - DBO
+DC_Sonder3 - Current Service Cost
+DC_Sonder3 - Umwandlung
+DC_Sonder3 - DBO Zins+
+DC_Sonder3 - DBO Zins-
+DC_Sonder3 - Zahlung 2019
+DC_Sonder3 - Zahlung 2020
+DC_Sonder3 - Zahlung 2021
+DC_Sonder3 - Zahlung 2022
+DC_Sonder3 - Zahlung 2023
+DC_Sonder4 - DBO
+DC_Sonder4 - Current Service Cost
+DC_Sonder4 - Umwandlung
+DC_Sonder4 - DBO Zins+
+DC_Sonder4 - DBO Zins-
+DC_Sonder4 - Zahlung 2019
+DC_Sonder4 - Zahlung 2020
+DC_Sonder4 - Zahlung 2021
+DC_Sonder4 - Zahlung 2022
+DC_Sonder4 - Zahlung 2023
+DC_Sonder5 - DBO
+DC_Sonder5 - Current Service Cost
+DC_Sonder5 - Umwandlung
+DC_Sonder5 - DBO Zins+
+DC_Sonder5 - DBO Zins-
+DC_Sonder5 - Zahlung 2019
+DC_Sonder5 - Zahlung 2020
+DC_Sonder5 - Zahlung 2021
+DC_Sonder5 - Zahlung 2022
+DC_Sonder5 - Zahlung 2023
+DC_Sonder6 - DBO
+DC_Sonder6 - Current Service Cost
+DC_Sonder6 - Umwandlung
+DC_Sonder6 - DBO Zins+
+DC_Sonder6 - DBO Zins-
+DC_Sonder6 - Zahlung 2019
+DC_Sonder6 - Zahlung 2020
+DC_Sonder6 - Zahlung 2021
+DC_Sonder6 - Zahlung 2022
+DC_Sonder6 - Zahlung 2023
+DC_Sonder7 - DBO
+DC_Sonder7 - Current Service Cost
+DC_Sonder7 - Umwandlung
+DC_Sonder7 - DBO Zins+
+DC_Sonder7 - DBO Zins-
+DC_Sonder7 - Zahlung 2019
+DC_Sonder7 - Zahlung 2020
+DC_Sonder7 - Zahlung 2021
+DC_Sonder7 - Zahlung 2022
+DC_Sonder7 - Zahlung 2023
+Personalnummer
+Name
+Geburtstag
+Bestandsart
+Geschlecht
+Standort
+Eintritt/Rentenbeginn
+Beginn vers.f. Dienstzeit
+Zusagedatum
+Endalter
+PR - DBO
+PR - Current Service Cost
+PR - DBO Zins+
+PR - DBO Zins-
+PR - Zahlung 2019
+PR - Zahlung 2020
+PR - Zahlung 2021
+PR - Zahlung 2022
+PR - Zahlung 2023
+PR_Sonder1 - DBO
+PR_Sonder1 - Current Service Cost
+PR_Sonder1 - DBO Zins+
+PR_Sonder1 - DBO Zins-
+PR_Sonder1 - Zahlung 2019
+PR_Sonder1 - Zahlung 2020
+PR_Sonder1 - Zahlung 2021
+PR_Sonder1 - Zahlung 2022
+PR_Sonder1 - Zahlung 2023
+PR_Sonder2 - DBO
+PR_Sonder2 - Current Service Cost
+PR_Sonder2 - DBO Zins+
+PR_Sonder2 - DBO Zins-
+PR_Sonder2 - Zahlung 2019
+PR_Sonder2 - Zahlung 2020
+PR_Sonder2 - Zahlung 2021
+PR_Sonder2 - Zahlung 2022
+PR_Sonder2 - Zahlung 2023
+UK - DBO
+UK - Current Service Cost
+UK - DBO Zins+
+UK - DBO Zins-
+UK - Zahlung 2019
+UK - Zahlung 2020
+UK - Zahlung 2021
+UK - Zahlung 2022
+UK - Zahlung 2023
+DC_neu - DBO
+DC_neu - Current Service Cost
+DC_neu - Umwandlung
+DC_neu - DBO Zins+
+DC_neu - DBO Zins-
+DC_neu - Zahlung 2019
+DC_neu - Zahlung 2020
+DC_neu - Zahlung 2021
+DC_neu - Zahlung 2022
+DC_neu - Zahlung 2023
+DC_alt - DBO
+DC_alt - Current Service Cost
+DC_alt - Umwandlung
+DC_alt - DBO Zins+
+DC_alt - DBO Zins-
+DC_alt - Zahlung 2019
+DC_alt - Zahlung 2020
+DC_alt - Zahlung 2021
+DC_alt - Zahlung 2022
+DC_alt - Zahlung 2023
+DC_Exec - DBO
+DC_Exec - Current Service Cost
+DC_Exec - Umwandlung
+DC_Exec - DBO Zins+
+DC_Exec - DBO Zins-
+DC_Exec - Zahlung 2019
+DC_Exec - Zahlung 2020
+DC_Exec - Zahlung 2021
+DC_Exec - Zahlung 2022
+DC_Exec - Zahlung 2023
+DC_Sonder1 - DBO
+DC_Sonder1 - Current Service Cost
+DC_Sonder1 - Umwandlung
+DC_Sonder1 - DBO Zins+
+DC_Sonder1 - DBO Zins-
+DC_Sonder1 - Zahlung 2019
+DC_Sonder1 - Zahlung 2020
+DC_Sonder1 - Zahlung 2021
+DC_Sonder1 - Zahlung 2022
+DC_Sonder1 - Zahlung 2023
+DC_Sonder2 - DBO
+DC_Sonder2 - Current Service Cost
+DC_Sonder2 - Umwandlung
+DC_Sonder2 - DBO Zins+
+DC_Sonder2 - DBO Zins-
+DC_Sonder2 - Zahlung 2019
+DC_Sonder2 - Zahlung 2020
+DC_Sonder2 - Zahlung 2021
+DC_Sonder2 - Zahlung 2022
+DC_Sonder2 - Zahlung 2023
+DC_Sonder3 - DBO
+DC_Sonder3 - Current Service Cost
+DC_Sonder3 - Umwandlung
+DC_Sonder3 - DBO Zins+
+DC_Sonder3 - DBO Zins-
+DC_Sonder3 - Zahlung 2019
+DC_Sonder3 - Zahlung 2020
+DC_Sonder3 - Zahlung 2021
+DC_Sonder3 - Zahlung 2022
+DC_Sonder3 - Zahlung 2023
+DC_Sonder4 - DBO
+DC_Sonder4 - Current Service Cost
+DC_Sonder4 - Umwandlung
+DC_Sonder4 - DBO Zins+
+DC_Sonder4 - DBO Zins-
+DC_Sonder4 - Zahlung 2019
+DC_Sonder4 - Zahlung 2020
+DC_Sonder4 - Zahlung 2021
+DC_Sonder4 - Zahlung 2022
+DC_Sonder4 - Zahlung 2023
+DC_Sonder5 - DBO
+DC_Sonder5 - Current Service Cost
+DC_Sonder5 - Umwandlung
+DC_Sonder5 - DBO Zins+
+DC_Sonder5 - DBO Zins-
+DC_Sonder5 - Zahlung 2019
+DC_Sonder5 - Zahlung 2020
+DC_Sonder5 - Zahlung 2021
+DC_Sonder5 - Zahlung 2022
+DC_Sonder5 - Zahlung 2023
+DC_Sonder6 - DBO
+DC_Sonder6 - Current Service Cost
+DC_Sonder6 - Umwandlung
+DC_Sonder6 - DBO Zins+
+DC_Sonder6 - DBO Zins-
+DC_Sonder6 - Zahlung 2019
+DC_Sonder6 - Zahlung 2020
+DC_Sonder6 - Zahlung 2021
+DC_Sonder6 - Zahlung 2022
+DC_Sonder6 - Zahlung 2023
+DC_Sonder7 - DBO
+DC_Sonder7 - Current Service Cost
+DC_Sonder7 - Umwandlung
+DC_Sonder7 - DBO Zins+
+DC_Sonder7 - DBO Zins-
+DC_Sonder7 - Zahlung 2019
+DC_Sonder7 - Zahlung 2020
+DC_Sonder7 - Zahlung 2021
+DC_Sonder7 - Zahlung 2022
+DC_Sonder7 - Zahlung 2023
