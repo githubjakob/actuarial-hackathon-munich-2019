@@ -22,7 +22,9 @@ class Service {
     //   }
     // }
 
+    const queryCopy = JSON.parse(JSON.stringify(query))
     const match = query
+    delete match.JahrZins
 
     const sumObj = {}
     absKeys.forEach(key => {
@@ -39,7 +41,14 @@ class Service {
       }
     ])
 
-    return aggregation
+    const mathAgg = await this.app.service('math-server').find({
+      query: {
+        ...aggregation,
+        JahrZins: queryCopy.JahrZins
+      }
+    })
+
+    return mathAgg
   }
 
   async get(id, params) {

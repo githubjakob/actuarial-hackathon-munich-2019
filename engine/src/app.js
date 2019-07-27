@@ -60,56 +60,65 @@ app.hooks(appHooks)
 // }, 1000)
 
 setTimeout(async () => {
-  // console.log('starting tester')
-  // try {
-  //   const res = await app.service('aggregator').find({
-  //     query: {
-  //       Geschlecht: 2,
-  //       Standort: { $in: ['Berlin', 'Tübingen', 'Hamburg'] },
-  //       Alter: { $gt: 20, $lte: 30 }
-  //     }
-  //   })
-  //   console.log('res: ', res['PR - DBO'])
-  // } catch (err) {
-  //   console.log('err.message: ', err.message)
-  // }
+  try {
+    return
+    const res = await app.service('aggregator').find({
+      query: {
+        // Geschlecht: 2,
+        // Standort: { $in: ['Saarbrücken'] }
+        // Alter: { $gt: 20, $lte: 30 }
+        JahrZins: [
+          { jahr: 2019, zins: 0.013 },
+          { jahr: 2020, zins: 0.012 },
+          { jahr: 2021, zins: 0.011 },
+          { jahr: 2022, zins: 0.01 },
+          { jahr: 2023, zins: 0.01 }
+        ]
+      }
+    })
+    console.log('res: ', res)
+  } catch (err) {
+    console.log('err.message: ', err.message)
+  }
 }, 1000)
 
 setTimeout(async () => {
-  // function convertDate(dateStr) {
-  //   if (!dateStr) return null
-  //   const dateArr = dateStr.split('.')
-  //   const date = DateTime.fromObject({
-  //     day: dateArr[0],
-  //     month: dateArr[1],
-  //     year: dateArr[2],
-  //     hour: 12
-  //   })
-  //   return date.toJSDate()
-  // }
-  // try {
-  //   const today = DateTime.local()
-  //   fs.createReadStream('daten2.csv')
-  //     .pipe(csv.parse({ headers: true, delimiter: ';', encoding: 'utf8' }))
-  //     .on('data', row => {
-  //       row.Bestandsart = convertDate(row.Bestandsart)
-  //       row['Eintritt/Rentenbeginn'] = convertDate(row['Eintritt/Rentenbeginn'])
-  //       row['Geburtstag'] = convertDate(row['Geburtstag'])
-  //       row['Beginn vers f Dienstzeit'] = convertDate(
-  //         row['Beginn vers.f. Dienstzeit']
-  //       )
-  //       row['Zusagedatum'] = convertDate(row['Zusagedatum'])
-  //
-  //       const birthDay = DateTime.fromJSDate(row.Geburtstag)
-  //       const age = Math.floor(today.diff(birthDay, 'years').years)
-  //       row.Alter = age
-  //
-  //       app.service('data').create(row)
-  //     })
-  // } catch (err) {
-  //   console.log('err.message: ', err.message)
-  //   console.log('\n\n\n\n\n\n')
-  // }
+  function convertDate(dateStr) {
+    if (!dateStr) return null
+    const dateArr = dateStr.split('.')
+    const date = DateTime.fromObject({
+      day: dateArr[0],
+      month: dateArr[1],
+      year: dateArr[2],
+      hour: 12
+    })
+    return date.toJSDate()
+  }
+  try {
+    const hasData = await app.service('data').find({ query: { $limit: 0 } })
+    if (hasData.total > 0) return
+    const today = DateTime.local()
+    fs.createReadStream('daten2.csv')
+      .pipe(csv.parse({ headers: true, delimiter: ';', encoding: 'utf8' }))
+      .on('data', row => {
+        row.Bestandsart = convertDate(row.Bestandsart)
+        row['Eintritt/Rentenbeginn'] = convertDate(row['Eintritt/Rentenbeginn'])
+        row['Geburtstag'] = convertDate(row['Geburtstag'])
+        row['Beginn vers f Dienstzeit'] = convertDate(
+          row['Beginn vers.f. Dienstzeit']
+        )
+        row['Zusagedatum'] = convertDate(row['Zusagedatum'])
+
+        const birthDay = DateTime.fromJSDate(row.Geburtstag)
+        const age = Math.floor(today.diff(birthDay, 'years').years)
+        row.Alter = age
+
+        app.service('data').create(row)
+      })
+  } catch (err) {
+    console.log('err.message: ', err.message)
+    console.log('\n\n\n\n\n\n')
+  }
 }, 1000)
 
 module.exports = app
