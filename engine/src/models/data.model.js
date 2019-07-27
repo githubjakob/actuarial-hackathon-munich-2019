@@ -7,15 +7,14 @@ module.exports = function(app) {
   const { Schema } = mongooseClient
   const data = new Schema(
     {
-      text: { type: String, required: true },
       Personalnummer: { type: Number },
       Name: { type: String },
-      Geburtstag: { type: String },
+      Geburtstag: { type: Date },
       Bestandsart: { type: Date },
       Geschlecht: { type: Number },
-      Standort: { type: Number },
+      Standort: { type: String },
       'Eintritt/Rentenbeginn': { type: Date },
-      'Beginn vers.f. Dienstzeit': { type: Date },
+      'Beginn vers f Dienstzeit': { type: Date },
       Zusagedatum: { type: Date },
       Endalter: { type: Number },
       'PR - DBO': { type: Number },
@@ -153,7 +152,8 @@ module.exports = function(app) {
       'DC_Sonder7 - Zahlung 2020': { type: Number },
       'DC_Sonder7 - Zahlung 2021': { type: Number },
       'DC_Sonder7 - Zahlung 2022': { type: Number },
-      'DC_Sonder7 - Zahlung 2023': { type: Number }
+      'DC_Sonder7 - Zahlung 2023': { type: Number },
+      Alter: { type: Number }
     },
     {
       timestamps: true
