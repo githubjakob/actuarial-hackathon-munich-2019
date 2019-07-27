@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Chart from "./components/Chart";
 
 import { Layout, Form, Select, InputNumber, Divider } from "antd";
 import {
