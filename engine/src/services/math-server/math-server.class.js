@@ -13,8 +13,7 @@ class Service {
 
   async find(params) {
     const { query } = params
-    console.log('query: ', query)
-    const url = `${this.url}/hello`
+    const url = `${this.url}/basic-table`
     const reqBody = {
       method: 'get',
       url,
@@ -22,6 +21,7 @@ class Service {
       params: query
     }
     const res = await axios(reqBody)
+    console.log('res from math: ', res)
     return res.data
   }
 
