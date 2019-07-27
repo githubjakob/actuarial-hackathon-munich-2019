@@ -1,10 +1,10 @@
 import _ from "lodash";
 
 const locations = _.uniq([
-  "Saarbrücken",
+  "Saarbrücken",
   "Aalen",
   "Berlin",
-  "Lübeck",
+  "Lübeck",
   "Aschaffenburg",
   "Wilhelmshaven",
   "Jülich",
@@ -15,7 +15,7 @@ const locations = _.uniq([
   "Paderborn",
   "Gießen",
   "Solingen",
-  "Düsseldorf",
+  "Düsseldorf",
   "Pforzheim",
   "Cuxhaven",
   "Quakenbrück",
@@ -51,7 +51,7 @@ const locations = _.uniq([
   "Trier",
   "Celle",
   "Gießen",
-  "Schwäbisch",
+  "Schwäbisch",
   "Wilhelmshaven",
   "Bonn"
 ]);
