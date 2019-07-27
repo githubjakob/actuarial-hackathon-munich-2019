@@ -3,7 +3,7 @@ const optionsToParams = require('../../hooks/options-to-params.js')
 
 module.exports = {
   before: {
-    all: [optionsToParams],
+    all: [],
     find: [],
     get: [],
     create: [],
