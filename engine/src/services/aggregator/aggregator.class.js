@@ -12,6 +12,7 @@ class Service {
 
   async find(params) {
     const { query } = params
+    console.log('query: ', query)
 
     const dataModel = this.app.service('data').Model
 
@@ -47,6 +48,9 @@ class Service {
         JahrZins: queryCopy.JahrZins
       }
     })
+
+    console.log('returning =================================')
+    console.log('mathAgg: ', mathAgg)
 
     return mathAgg
   }

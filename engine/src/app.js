@@ -61,7 +61,6 @@ app.hooks(appHooks)
 
 setTimeout(async () => {
   try {
-
     const res = await app.service('aggregator').find({
       query: {
         // Geschlecht: 2,
@@ -76,7 +75,7 @@ setTimeout(async () => {
         ]
       }
     })
-    console.log('res: ', JSON.stringify(res, null, 2))
+    console.log('res: ', res)
   } catch (err) {
     console.log('err.message: ', err.message)
   }
