@@ -121,4 +121,31 @@ setTimeout(async () => {
   }
 }, 1000)
 
+const testMathRes = [
+  {
+    year: 2019,
+    data: {
+      dbo_boy: 8,
+      service_cost: 1,
+      interest_cost: 9,
+      contributions: 0,
+      benefits_paid: 8,
+      remeasurements: 8,
+      dbo_eoy: 32
+    }
+  },
+  {
+    year: 2020,
+    data: {
+      dbo_boy: 8,
+      service_cost: 1,
+      interest_cost: 9,
+      contributions: 0,
+      benefits_paid: 8,
+      remeasurements: 8,
+      dbo_eoy: 32
+    }
+  }
+]
+
 module.exports = app
