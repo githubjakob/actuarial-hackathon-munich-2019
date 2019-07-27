@@ -7,8 +7,30 @@ import { locations, genders, plans } from "./data";
 const { Option } = Select;
 const { Header, Content, Footer } = Layout;
 
+const MultiSelect = ({ options = [], state, setState }) => {
+  return (
+    <Select
+      mode="multiple"
+      style={{ minWidth: 150 }}
+      defaultValue={[]}
+      onChange={values => setState(values)}
+      value={state}
+      allowClear
+    >
+      {options.map(option => (
+        <Option key={option} value={option}>
+          {option}
+        </Option>
+      ))}
+    </Select>
+  );
+};
+
 const App = () => {
   const [location, setLocation] = useState([]);
+  const [gender, setGender] = useState("");
+
+  console.log({ location, gender });
 
   return (
     <div className="App">
@@ -19,23 +41,30 @@ const App = () => {
         <Content style={{ padding: "0 50px", marginTop: 64 }}>
           <Form layout="inline">
             <Form.Item label="Standort">
+              <MultiSelect
+                options={locations}
+                state={location}
+                setState={setLocation}
+              />
+            </Form.Item>
+            <Form.Item label="Alter"> </Form.Item>
+            <Form.Item label="Geschlecht">
               <Select
-                mode="multiple"
                 style={{ minWidth: 150 }}
-                defaultValue={[]}
-                onChange={location => setLocation(location)}
-                value={location}
+                onChange={value => setGender(value)}
+                value={gender}
                 allowClear
               >
-                {locations.map(location => (
-                  <Option key={location} value={location}>
-                    {location}
+                <Option key="-" value="">
+                  Alle
+                </Option>
+                {Object.entries(genders).map(([value, text]) => (
+                  <Option key={value} value={value}>
+                    {text}
                   </Option>
                 ))}
               </Select>
             </Form.Item>
-            <Form.Item label="Alter"> </Form.Item>
-            <Form.Item label="Geschlecht"> </Form.Item>
             <Form.Item label="Zusage / Plan"> </Form.Item>
           </Form>
           {/* <div style={{ background: "#fff", padding: 24, minHeight: 380 }}>
