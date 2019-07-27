@@ -11,8 +11,7 @@ const defaultConfig = {
     type: "inside"
   },
   yAxis: {
-    type: "value",
-    inverse: true
+    type: "value"
   },
   color: [
     "#ff7875",
@@ -30,32 +29,41 @@ const defaultConfig = {
   ]
 };
 
-const getChartOptions = (data, xLabels) => {
+const getChartOptions = data => {
+  console.log({ data });
   const computedConfig = {
     xAxis: {
       type: "category",
       boundaryGap: false,
-      data: xLabels
+      data: data.map(x => x.year)
     },
-    legend: {
-      data: _.map(data, "name")
-    },
-    series: data.map(product => {
-      return {
-        name: product.name,
+    // legend: {
+    //   data: data.year
+    // },
+    series: [
+      {
+        name: "DBO EOY",
+        data: data.map(x => x.data.dbo_eoy),
         type: "line",
-        data: product.values,
-        symbol: "none",
         smooth: true
-      };
-    })
+      }
+    ]
+    // series: data.map((value, index) => {
+    //   console.log({ value });
+    //   return {
+    //     name: index,
+    //     type: "line",
+    //     data: value.data.dbo_eoy,
+    //     smooth: true
+    //   };
+    // })
   };
 
   return { ...defaultConfig, ...computedConfig };
 };
 
 const Chart = props => {
-  const { data = [], labels = [], loading = false } = props;
+  const { data = [], loading = false } = props;
 
   if (!data.length)
     return (
@@ -64,7 +72,7 @@ const Chart = props => {
       </Spin>
     );
 
-  const chartOptions = getChartOptions(data, labels);
+  const chartOptions = getChartOptions(data);
   return (
     <ReactEcharts option={chartOptions} notMerge style={{ height: "600px" }} />
   );

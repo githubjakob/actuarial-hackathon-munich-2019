@@ -57,11 +57,40 @@ const App = () => {
         Geschlecht: gender || undefined,
         Standort: locations.length ? { $in: locations } : undefined,
         Alter: age.from && age.to ? { $gt: age.from, $lte: age.to } : undefined,
-        JahrZins: Object.values(jahrZins).filter(x => !!x)
+        JahrZins: Object.entries(jahrZins)
+          .filter(([_jahr, zins]) => !!zins)
+          .map(([jahr, zins]) => ({ jahr, zins }))
       };
       try {
         setLoading(true);
-        const res = await app.service("aggregator").find({ query });
+        // const res = await app.service("aggregator").find({ query });
+        // TODO: Remove mock data
+        const res = [
+          {
+            year: 2019,
+            data: {
+              dbo_boy: 8,
+              service_cost: 1,
+              interest_cost: 9,
+              contributions: 0,
+              benefits_paid: 8,
+              remeasurements: 8,
+              dbo_eoy: 32
+            }
+          },
+          {
+            year: 2020,
+            data: {
+              dbo_boy: 8,
+              service_cost: 1,
+              interest_cost: 9,
+              contributions: 0,
+              benefits_paid: 8,
+              remeasurements: 8,
+              dbo_eoy: 50
+            }
+          }
+        ];
         setLoading(false);
         setData(res);
       } catch (err) {
@@ -142,10 +171,10 @@ const App = () => {
             </div>
           </Form>
           <Divider />
-          <Chart loading={loading} />
+          <Chart data={data} loading={loading} />
         </Content>
         <Footer style={{ textAlign: "center" }}>
-          Created by team h4ckerm3n
+          Created by team häckermen
         </Footer>
       </Content>
     </div>
