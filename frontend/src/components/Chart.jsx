@@ -43,7 +43,7 @@ const getChartOptions = data => {
     series: [
       {
         name: "DBO EOY",
-        data: data.map(x => x.data.dbo_eoy),
+        data: Math.floor(data.map(x => x.data.dbo_eoy)),
         type: "line",
         smooth: true
       }
