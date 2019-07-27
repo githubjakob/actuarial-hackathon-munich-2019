@@ -4,7 +4,7 @@ import "./App.css";
 import Chart from "./components/Chart";
 import DataTable from "./components/DataTable";
 
-import { Layout, Form, Select, InputNumber, Divider, Input } from "antd";
+import { Layout, Form, Select, InputNumber, Divider, Input, Card } from "antd";
 import {
   locations as locationsData,
   genders as gendersData,
@@ -77,50 +77,51 @@ const App = () => {
   console.log({ jahrZins });
 
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundColor: "#eee" }}>
       <Content style={{ height: "100vh" }}>
-        <Header>
+        <Header style={{ backgroundColor: "#002766" }}>
           <h1 style={{ color: "white" }}>DBO Insights</h1>
         </Header>
         <Content style={{ padding: "0 50px", marginTop: 64 }}>
-          <Form layout="inline">
-            <Form.Item label="Standort">
-              <MultiSelect
-                placeholder="Standort auswählen"
-                options={locationsData}
-                state={locations}
-                setState={setLocations}
-              />
-            </Form.Item>
-            <Form.Item label="Alter">
-              <InputNumber
-                placeholder="Von"
-                onChange={value => setAge({ ...age, from: value })}
-              />
-              {" - "}
-              <InputNumber
-                placeholder="Bis"
-                onChange={value => setAge({ ...age, to: value })}
-              />
-            </Form.Item>
-            <Form.Item label="Geschlecht">
-              <Select
-                style={{ minWidth: 150 }}
-                onChange={value => setGender(value)}
-                value={gender}
-                allowClear
-              >
-                <Option key="-" value="">
-                  Alle
-                </Option>
-                {Object.entries(gendersData).map(([value, text]) => (
-                  <Option key={value} value={value}>
-                    {text}
+          <Card title="Filter">
+            <Form layout="inline">
+              <Form.Item label="Standort">
+                <MultiSelect
+                  placeholder="Standort auswählen"
+                  options={locationsData}
+                  state={locations}
+                  setState={setLocations}
+                />
+              </Form.Item>
+              <Form.Item label="Alter">
+                <InputNumber
+                  placeholder="Von"
+                  onChange={value => setAge({ ...age, from: value })}
+                />
+                {" - "}
+                <InputNumber
+                  placeholder="Bis"
+                  onChange={value => setAge({ ...age, to: value })}
+                />
+              </Form.Item>
+              <Form.Item label="Geschlecht">
+                <Select
+                  style={{ minWidth: 150 }}
+                  onChange={value => setGender(value)}
+                  value={gender}
+                  allowClear
+                >
+                  <Option key="-" value="">
+                    Alle
                   </Option>
-                ))}
-              </Select>
-            </Form.Item>
-            {/* <Form.Item label="Zusage / Plan">
+                  {Object.entries(gendersData).map(([value, text]) => (
+                    <Option key={value} value={value}>
+                      {text}
+                    </Option>
+                  ))}
+                </Select>
+              </Form.Item>
+              {/* <Form.Item label="Zusage / Plan">
               <MultiSelect
                 placeholder="Plan auswählen"
                 options={plansData}
@@ -128,29 +129,36 @@ const App = () => {
                 setState={setPlans}
               />
             </Form.Item> */}
-            <div style={{ marginTop: 10 }}>
-              <Form.Item label="Zinsprognosen" />
-              {Object.keys(jahrZins).map(jahr => {
-                return (
-                  <Form.Item>
-                    <Input
-                      style={{ width: 150 }}
-                      addonBefore={jahr}
-                      defaultValue={jahrZins[jahr]}
-                      onChange={zins => {
-                        setJahrZins({ ...jahrZins, [jahr]: zins.target.value });
-                      }}
-                    />
-                  </Form.Item>
-                );
-              })}
-            </div>
-          </Form>
-          <Divider />
-          <Chart data={data} loading={loading} />
-          <DataTable data={data} loading={loading} />
+              <div style={{ marginTop: 10 }}>
+                <Form.Item label="Zinsprognosen" />
+                {Object.keys(jahrZins).map(jahr => {
+                  return (
+                    <Form.Item>
+                      <Input
+                        style={{ width: 150 }}
+                        addonBefore={jahr}
+                        defaultValue={jahrZins[jahr]}
+                        onChange={zins => {
+                          setJahrZins({
+                            ...jahrZins,
+                            [jahr]: zins.target.value
+                          });
+                        }}
+                      />
+                    </Form.Item>
+                  );
+                })}
+              </div>
+            </Form>
+          </Card>
+          <Card loading={loading} style={{ marginTop: 20 }}>
+            <Chart data={data} />
+          </Card>
+          <Card loading={loading} style={{ marginTop: 20 }}>
+            <DataTable data={data} />
+          </Card>
         </Content>
-        <Footer style={{ textAlign: "center" }}>
+        <Footer style={{ textAlign: "center", marginTop: 20 }}>
           Created by team häckermen
         </Footer>
       </Content>
